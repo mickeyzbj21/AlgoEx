@@ -28,7 +28,7 @@ import java.util.HashSet;
 public class Question1_7 {
 
 
-    public void rotate(int[][] matrix) {
+    public void rotate0(int[][] matrix) {
         int N = matrix.length;
         int count = 0;
         HashSet<Integer> h = new HashSet<>();
@@ -66,11 +66,33 @@ public class Question1_7 {
         return index;
     }
 
+    // 2 Times Rotate → 90 degrees Rotate
+    // (1.rotate along the diagonal 2.rotate along the middle vertical line)
     public void rotate1(int[][] matrix) {
+        int N = matrix.length;
+        // to rotate along the diagonal line
+        for (int i = 1; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+        // ~ (N*N-N)/2 =1/2 N^2
 
-
+        // to switch in half(vertically)
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N / 2; j++) {
+                //swap(matrix[i][j],matrix[i][N-1-j])
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][N - 1 - j];
+                matrix[i][N - 1 - j] = temp;
+            }
+        }
+        // ~ 1/2 N^2
 
     }
+
 
     public static void main(String[] args) {
         Question1_7 q = new Question1_7();
@@ -78,7 +100,7 @@ public class Question1_7 {
         for (int[] a : matrix) {
             System.out.println(Arrays.toString(a));
         }
-        q.rotate(matrix);
+        q.rotate1(matrix);
         System.out.println("----");
         for (int[] a : matrix) {
             System.out.println(Arrays.toString(a));
