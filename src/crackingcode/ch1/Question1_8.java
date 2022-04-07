@@ -1,4 +1,4 @@
-package crackingthecodinginterview.ch1;
+package crackingcode.ch1;
 
 import java.util.Arrays;
 

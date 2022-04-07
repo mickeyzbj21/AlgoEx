@@ -1,4 +1,4 @@
-package crackingthecodinginterview.ch4;
+package crackingcode.ch4;
 
 import java.util.*;
 
@@ -50,7 +50,8 @@ public class Question4_1 {
                 dfs1(AL, visit, edgeTo, e);
             }
         }
-        return;
+        // return;
+        // TIP:Don't need return; Cause, it is the end of the function and the return is void.
     }
 
     // Method2: to Use Adjacency List & DFS (When hitting the target, immediately return)

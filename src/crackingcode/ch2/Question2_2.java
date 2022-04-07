@@ -1,4 +1,4 @@
-package crackingthecodinginterview.ch2;
+package crackingcode.ch2;
 
 
 

@@ -1,4 +1,4 @@
-package crackingthecodinginterview.ch1;
+package crackingcode.ch1;
 
 
 /** 面试题 01.09. String Rotation

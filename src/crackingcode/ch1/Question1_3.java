@@ -1,4 +1,4 @@
-package crackingthecodinginterview.ch1;
+package crackingcode.ch1;
 
 /**
  * 面试题 01.03. String to URL LCCI

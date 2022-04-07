@@ -1,6 +1,5 @@
-package crackingthecodinginterview.ch3;
+package crackingcode.ch3;
 
-import java.util.Arrays;
 import java.util.Stack;
 
 /**

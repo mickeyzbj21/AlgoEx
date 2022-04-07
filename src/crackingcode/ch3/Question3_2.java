@@ -1,4 +1,4 @@
-package crackingthecodinginterview.ch3;
+package crackingcode.ch3;
 
 import java.util.Stack;
 
