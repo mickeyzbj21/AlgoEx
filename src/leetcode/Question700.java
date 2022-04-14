@@ -18,14 +18,18 @@ package leetcode;
  * root is a binary search tree.
  * 1 <= val <= 107
  */
-//TAG: BTree, BST
+//TAG: BSTree, BTree
 public class Question700 {
 
     public TreeNode searchBST(TreeNode root, int val) {
-        if (root == null) return null;
+        // the BaseCase
+        if (root == null) return null; // TIP: The Base Case 🚧 : WHEN it hits the last node(Left,Right==Null)
+        // The One
         if (root.val == val) return root;
-        else if (val < root.val) root = searchBST(root.left, val); // LEFT: val < root.val
-        else root = searchBST(root.right, val); // RIGHT: val > root.val
+        // LEFT: val < root.val
+        else if (val < root.val) root = searchBST(root.left, val);
+        // RIGHT: val > root.val
+        else root = searchBST(root.right, val);
         return root;
     }
 
